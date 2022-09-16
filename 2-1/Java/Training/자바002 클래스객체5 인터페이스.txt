@@ -1,0 +1,235 @@
+추상 A
+
+package examlpe;
+
+public class Test {
+	public static void main(String[] args) {
+		Rectangle r = new Rectangle(3, 4);
+		System.out.println(r.getArea());
+	}
+}
+
+package examlpe;
+
+public abstract class Shape {
+	abstract double getArea();
+}
+
+
+package examlpe;
+
+public class Rectangle extends Shape {
+	int width;
+	int height;
+
+	public Rectangle(int width, int height) {
+		this.width = width;
+		this.height = height;
+	}
+	@Override
+	double getArea() {
+		return width*height;
+	}
+}
+
+추상 B
+
+package examlpe;
+
+public class Test {
+	public static void main(String[] args) {
+		Shape[] s= {new Rectangle(3, 4), new Circle(5), new Circle(2)};Object[] o = {new String("asdf"), new Integer(10), new Double(10.2)};
+		for(int i=0;i<s.length;i++)
+		System.out.println(s[i].getArea());
+	}
+}
+package examlpe;
+
+public class Rectangle extends Shape {
+	int width;
+	int height;
+
+	public Rectangle(int width, int height) {
+		this.width = width;
+		this.height = height;
+	}
+	@Override
+	double getArea() {
+		return width*height;
+	}
+}
+
+package examlpe;
+
+public class Circle extends Shape{
+             int radius;
+             public Circle(int radius) {
+            	 this.radius=radius;
+             }
+             public double getArea() {
+            	 return radius*radius*3.14;
+             }
+}
+
+package examlpe;
+
+public abstract class Shape {
+	abstract double getArea();
+}
+
+인터페이스 A
+
+package examlpe;
+
+public class Test {
+	public static void main(String[] args) {
+		Rectangle r = new Rectangle(50, 70, 3, 4);
+		r.moveTo(120, 130);
+		System.out.println(r.toString());
+		
+	}
+}
+package examlpe;
+
+public class Rectangle implements ShapeAction {
+	int x;
+	int y;
+	int width;
+	int height;
+
+	public Rectangle(int x,int y,int width, int height) {
+		this.width = width;
+		this.height = height;
+		this.x=x;
+		this.y=y;
+	}
+	@Override
+	public void moveTo(int x, int y) {
+		this.x=x;
+		this.y=y;
+	}
+	@Override
+	public String toString() {
+		return ""+x+" "+y+" "+width+" "+height;
+	}
+	@Override
+	public void setColor(int color) {
+	}
+}
+
+package examlpe;
+
+public interface ShapeAction {
+	void moveTo(int x, int y);
+	void setColor(int color);
+}
+
+
+인터페이스 B
+
+
+package examlpe;
+
+public class Circle implements ShapeAction{
+             int radius;
+             public Circle(int radius) {
+            	 this.radius=radius;
+             }
+@Override
+             public double getArea() {
+            	 return radius*radius*PI;
+             }
+}
+
+package examlpe;
+
+public interface ShapeAction {
+	double getArea();
+	double PI=3.14159;
+}
+Cirlce c=new Circle(5);
+syso(c.getArea());
+
+인터페이스 C
+package examlpe;
+
+public interface ShapeAction {
+	double getArea();
+	double PI=3.14159;
+}
+
+package examlpe;
+
+public class Rectangle implements ShapeAction {
+	int width;
+	int height;
+
+	public Rectangle(int width, int height) {
+		this.width = width;
+		this.height = height;
+	
+	}
+
+@Override
+public double getArea() {
+	
+	return width*height;
+}
+}
+
+
+package examlpe;
+
+public class Circle implements ShapeAction{
+             int radius;
+             public Circle(int radius) {
+            	 this.radius=radius;
+             }
+             @Override
+             public double getArea() {
+            	 return radius*radius*3.14;
+             }
+}
+package examlpe;
+
+public interface ShapeAction {
+	double getArea();
+	
+}
+
+인터페이스 D
+package examlpe;
+
+public class Test {
+	public static void main(String[] args) {
+	  BankingAction b=new BankingAction() {
+		double balance;
+		@Override
+		public void withdraw(double money) {
+			
+		}
+		
+		@Override
+		public double getBalance() {
+			
+			return balance;
+		}
+		
+		@Override
+		public void deposit(double money) {
+			balance+=money;
+		}
+	};   
+	  b.deposit(1000);
+	  System.out.println(b.getBalance());
+	}}
+
+package examlpe;
+
+public interface BankingAction {
+            void deposit(double money);
+            void withdraw(double money);
+            double getBalance();
+}
+
+E

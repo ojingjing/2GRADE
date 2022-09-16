@@ -1,0 +1,238 @@
+반복문A
+
+package examlpe;
+
+public class Test {
+public static void main(String[] args) {
+    int n=1;
+    int sum=0;
+    while(n<101)
+    {
+    	if (n%2==1)
+    	{
+    		sum+=n;
+    		
+    	}
+         n+=1 ;
+    }
+    
+    System.out.print(sum);
+     return;
+       
+       
+}
+}     
+
+반복문B
+
+package examlpe;
+
+public class Test {
+public static void main(String[] args) {
+    int sum=1;
+    
+    for(int i=1;i<=10;i++) {
+    	sum*=i;
+    }
+  
+     System.out.print(sum);
+     return;
+       
+       
+             
+
+}
+}     
+반복문c
+package examlpe;
+
+public class Test {
+public static void main(String[] args) {
+   int n=10;
+   int x=1;
+   int sum=0;
+   
+   while(x<=n)
+   {
+	   sum+=x;
+	   
+	   x+=1;
+   }
+   System.out.print(sum);
+       
+             
+
+}
+}
+
+반복문 d
+
+package examlpe;
+
+public class Test {
+public static void main(String[] args) {
+     int n=100;
+     int m=1;
+     int sum=0;
+     
+     for (int i=m; i<=n; i++)
+     {
+    	 sum+=i;
+     }
+     
+     System.out.print(sum);     
+
+}
+}     
+
+반복문 e
+
+package examlpe;
+
+public class Test {
+public static void main(String[] args) {
+    int n=-3;
+    int sum=0;
+    
+    while (n<=0) {
+    	
+    	sum=sum+(2*n)+1;
+    	
+    	n+=1;
+    }
+  System.out.print(sum);
+}
+}     
+
+
+반복문 f
+
+package examlpe;
+
+public class Test {
+public static void main(String[] args) {
+        int n=100;
+        int sum=0;
+        for(int i=n;i>=3;i++)
+        {
+        	sum=sum+(2*i)-1;
+        }
+        
+        System.out.print(sum);
+
+
+}
+
+}     
+
+반복문 G
+
+package examlpe;
+
+public class Test {
+public static void main(String[] args) {
+        int n=5;
+        int m=3;
+        int sum=0;
+        
+        for (int i=m;i<=m*n;i+=m) {
+        	
+        	sum+=i;
+        	
+        	
+        }
+        System.out.print(sum);
+
+}
+
+}     
+
+반복문 H 피보나치수열
+
+package examlpe;
+
+
+public class Test {
+	public static void main(String[] args) {
+		  int n = 10;
+	      int p[] = new int[n];
+	      p[0]=0;
+	      if(n>1)
+	         p[1]=1;
+	      for(int i=2;i<n;i++)
+	         p[i]=p[i-2]+p[i-1];
+	      for(int i=0;i<n;i++) {
+	         System.out.print(p[i]);
+	         if(i<p.length-1)
+	            System.out.print(",");
+	      }
+	}}
+		
+반복문 i
+
+package examlpe;
+
+public class Test {
+public static void main(String[] args) {
+       
+        int n=5;
+        int sum=1;
+        
+        for(int i=n;i>0;i--)
+        {
+        	sum*=i;
+        }
+            System.out.print(sum);
+        
+        
+}
+
+}     
+
+
+
+
+반복문 j
+
+package examlpe;
+
+
+public class Test {
+	public static void main(String[] args) {
+		  int n = 2;
+		  int m= 0;
+		  int sum=1;
+		  for (int i=1;i<=m;i++)
+		  {
+			  sum*=n;
+			  if(m==0)
+			  {   
+				  sum=1;
+				  return ;
+			  }
+			  
+		  }
+	System.out.println(sum);
+	
+	}}
+
+
+
+
+반복문k
+
+package examlpe;
+
+public class Test {
+public static void main(String[] args) {
+       
+        for (int i=1;i<=9;i++)
+        { 
+        	for(int j=1;j<=9;j++)
+        		System.out.println(i+"X"+j+"="+i*j);
+        	}
+}
+
+}     
+
+반복문 L

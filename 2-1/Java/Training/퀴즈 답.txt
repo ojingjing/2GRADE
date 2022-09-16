@@ -1,0 +1,98 @@
+1. 다음 조건에 따라 고객 클래스 Customer를 정의하시오.
+- 필드변수명(설명,자료형): email(메일주소,String)
+package examlpe;
+
+public class Customer {
+             String email;
+}
+2. 다음은 어떤 Customer 객체의 메일주소를 출력하는 코드와 그 실행결과이다. 이 코드의 앞쪽 부분을 완성하시오.
+
+System.out.println(c.email);
+
+<실행결과>
+gdhong@ks.ac.kr
+
+package examlpe;
+
+public class Test {
+	public static void main(String[] args) {
+	Customer c=new Customer();
+	c.email="gdhong@ks.ac.kr";
+	System.out.println(c.email);
+	
+	}
+}
+3. 다음 조건에 따라 출판날짜 클래스 PublicationDate를 정의하시오.
+- 필드변수명(설명,자료형): year(연도,int), month(월,int), day(일,int)
+
+package examlpe;
+
+public class PublicationDate {
+			int year;
+			int month;
+			int day;
+
+}
+4. 다음 조건에 따라 도서 클래스 Book을 정의하시오.
+- 필드변수명(설명,자료형): title(도서제목,String), pDate(출판일자,PublicationDate)
+
+package examlpe;
+
+public class Book {
+        
+	PublicationDate pDate;
+	String title;
+    
+
+}
+
+	
+5. 다음은 어떤 Book 객체의 도서제목과 도서출판일을 출력하는 코드와 그 실행결과이다. 이 코드를 완성하시오.
+package examlpe;
+
+public class Test {
+	public static void main(String[] args) {
+	Book b=new Book();
+	b.title="자바기초";
+	b.pDate=new PublicationDate();
+	b.pDate.year=2020;
+	b.pDate.month=5;
+	b.pDate.day=6;
+	
+	
+	
+	System.out.println("도서제목:"+b.title);
+	System.out.println("도서출판일:"+b.pDate.year+"년"+b.pDate.month+"월"+b.pDate.day+"일");
+	}}
+<실행결과>
+도서제목:자바기초
+도서출판일:2020년5월6일
+
+6. 클래스 Test가 이미 정의되어 있다고 가정하고, 클래스 Test의 객체를 생성하여 그 객체참조값을 객체참조변수 test에 저장하는 코드를 작성하시오.
+package examlpe;
+
+public class Test {
+	public static void main(String[] args) {
+	Test test=new Test();
+	}}   //test:객체참조 변수  new Test():객체 참조 값
+
+
+7. 다음 조건에 따라 학생 클래스 Student를 정의하시오.
+- 필드변수명(설명,자료형): id(학번,String), score(점수,int)
+- 학번, 점수를 파라미터로 전달받아 대응하는 필드에 대입하는 생성자
+- 학번, 점수를 문자열로 반환하는 toString() 메소드
+package examlpe;
+
+public class Student{
+      String id;
+      int score;
+      
+      public Student (String id,int score) {
+    	  this.id=id;
+    	  this.score=score;
+      }
+@Override
+	public String toString() {
+	return id+""+score;
+}
+}

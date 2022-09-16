@@ -1,0 +1,284 @@
+문자열 A
+
+package examlpe;
+import javax.swing.JOptionPane;
+public class Test {
+	public static void main(String[] args) {
+		
+		String s = JOptionPane.showInputDialog("문자열 입력");
+		char firstChar =s.charAt(0);
+		char lastChar=s.charAt(s.length()-1);
+		System.out.println(firstChar);
+		System.out.println(lastChar);
+		
+				
+				
+	}
+}
+
+
+문자열 B
+
+package examlpe;
+import javax.swing.JOptionPane;
+public class Test {
+	public static void main(String[] args) {
+		
+		String s = JOptionPane.showInputDialog("문자열 입력");
+		String prefix =s.substring(0,3) ;
+		String postfix =s.substring(s.length()-3) ;
+		System.out.println(prefix);
+		System.out.println(postfix);
+		}
+		}
+
+
+
+문자열C 
+package examlpe;
+import javax.swing.JOptionPane;
+public class Test {
+	public static void main(String[] args) {
+		
+		String s = JOptionPane.showInputDialog("문자열 입력");
+		boolean flag =s.contains("부산");
+		String t[]=s.split("[부산연구소]");
+		if(flag==true)
+		{
+		      flag=s.contains("연구소");
+		     if(flag==true)
+		     JOptionPane.showMessageDialog(null,t);
+		     else
+		     JOptionPane.showMessageDialog(null, "입력 오류");
+		    
+		}
+		else
+			JOptionPane.showMessageDialog(null, "입력오류");
+	}
+}
+
+javax.swing.JOptionPane;
+
+public class Test {
+
+   public static void main(String[] args) {
+      String s = JOptionPane.showInputDialog("문자열 입력");
+      if(s.substring(0,2).equals("부산")==true&&s.substring(s.length()-3).equals("연구소")==true)
+         JOptionPane.showMessageDialog(null,s.substring(2,s.length()-3));
+      else
+         JOptionPane.showMessageDialog(null, "입력 오류");
+   }
+}
+
+문자열 D
+
+package examlpe;
+import javax.swing.JOptionPane;
+public class Test {
+	public static void main(String[] args) {
+		
+		String s = JOptionPane.showInputDialog("문자열 입력");
+		int pos =s.indexOf("Seoul") ;
+		System.out.println(pos);
+		}
+		}
+
+
+문자열 E 
+
+package examlpe;
+
+import javax.swing.JOptionPane;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		String s = JOptionPane.showInputDialog("문자열 입력");
+		String v[] = s.split("-");
+		String firstCountry = v[0];
+		String lastCountry =v[v.length-1] ;
+		System.out.println(firstCountry);
+		System.out.println(lastCountry);
+		}
+		}
+문자열F
+package examlpe;
+
+import javax.swing.JOptionPane;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		String s = JOptionPane.showInputDialog("문자열 입력");
+		String v[] = s.split(" ");
+		for (int i=0;i<v.length;i++)
+		{
+			if(v[i].length()>=3)
+				System.out.println(v[i]);
+		}
+		}
+		}
+문자열G
+package examlpe;
+
+import javax.swing.JOptionPane;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		String s = JOptionPane.showInputDialog("문자열 입력");
+		String v= s.replace("-",",");
+		System.out.println(v);
+		}
+		}
+문자열 H
+
+package examlpe;
+
+import javax.swing.JOptionPane;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		String s = JOptionPane.showInputDialog("문자열 입력");
+		System.out.println(s.substring(s.indexOf('[')+1,s.indexOf(']')));
+		}
+		}
+
+문자열 I
+
+package examlpe;
+
+import javax.swing.JOptionPane;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		String s = JOptionPane.showInputDialog("문자열 입력");
+	    String v[]=s.split(" ");
+	    double avg=0;
+	    for(int i=0;i<v.length;i++) {
+	    	avg+=Double.parseDouble(v[i]);
+	    	
+	    }
+	    System.out.println("평균="+avg/v.length);
+		}
+		}
+
+문자열 J
+
+package examlpe;
+
+import javax.swing.JOptionPane;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		String s = JOptionPane.showInputDialog("문자열 입력");
+	    String v[]=s.split(" ");
+	     for(int i=0;i<v.length;i++) {
+	    	 if(v[i].endsWith("을")==true||v[i].endsWith("를")==true) {
+	    		 System.out.println(v[i+1]);
+	    	 }
+	     }
+	}
+		}
+문자열 K
+
+package examlpe;
+
+import javax.swing.JOptionPane;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		String s = JOptionPane.showInputDialog("문자열 입력");
+	    String v[]=s.split(" ");
+        for(int i=v.length-1; i>=0;i--) {
+        	System.out.print(v[i]+" ");
+        }
+	    	 
+	     
+	}
+}
+
+문자열L
+package examlpe;
+
+import javax.swing.JOptionPane;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		String s = JOptionPane.showInputDialog("문자열 입력");
+	      char a[]=s.toCharArray();
+	      for(int i=a.length-1;i>=0;i--)
+        	System.out.print(a[i]);
+         
+	     
+	}
+}
+문자열 M
+package examlpe;
+
+import javax.swing.JOptionPane;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		String s = JOptionPane.showInputDialog("문자열 입력");
+	    String v[]=s.split(" ");
+	    for (int i=0;i<v.length;i++) {
+	    	for(int j=v[i].length()-1;j>=0;j--) {
+	    		System.out.print(v[i].charAt(j));
+	    		
+	    
+	    		
+	    	}
+	    	System.out.print(" ");
+	    }
+	     
+	}
+}
+문자열 Z
+
+
+package examlpe;
+
+import javax.swing.JOptionPane;
+
+import com.sun.tools.sjavac.server.SysInfo;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		String s = JOptionPane.showInputDialog("문자열 입력");
+	    
+		String t=s.replaceAll(",","-");
+		String v[]=t.split("-");
+		for(int i=0;i<v.length;i+=2) { 
+			
+				System.out.print(v[i]);
+				if(i<v.length-2)
+				System.out.print(",");
+		}
+		System.out.println();
+		for(int i=1;i<v.length;i+=2) { 
+			
+				System.out.print(v[i]);
+				if(i<v.length-1)
+					System.out.print(",");
+		}
+	    
+	}
+	}

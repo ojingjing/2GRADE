@@ -1,0 +1,53 @@
+클래스 실습A
+package examlpe;
+
+public class Test {
+	
+		public static void main(String[] args) {
+			Location loc;
+			loc=new Location("한국","부산");
+			System.out.println("국가:"+loc.country);
+			System.out.println("도시:"+loc.city);
+	
+		}
+}
+	
+package examlpe;
+
+public class Location {
+    String country;
+    String city;
+    public Location(String country, String city) {
+    	this.country= country;
+    	this.city=city;
+ }
+}
+클래스 실습F
+package examlpe;
+
+public class Test {
+public static void main(String[] args) {
+YMD date=new YMD(2019, 12, 31);
+System.out.println(date.toString());
+System.out.println(date);
+}
+}
+	package examlpe;
+
+public class YMD {
+       int year;
+       int month;
+       int day;
+       public YMD(int year,int month,int day) {
+    	   this.year=year;
+    	   this.month=month;
+    	   this.day=day;
+    	   
+       }
+       @Override
+       public String toString() {
+    	   return year+"년"+month+"월"+day+"일";
+    	   }
+   }
+
+

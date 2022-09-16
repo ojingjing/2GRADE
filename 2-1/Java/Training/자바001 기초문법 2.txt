@@ -1,0 +1,166 @@
+조건문 -실습A0
+package examlpe;
+
+public class Test {
+public static void main(String[] args) {
+	  int score= 0;
+	  if (score<0) {
+		 System.out.println(score*-1);
+		 return;
+	  }
+	  System.out.println(score);
+	  
+}
+}
+
+조건문 실습A1
+package examlpe;
+
+public class Test {
+public static void main(String[] args) {
+	  int score= 0;
+	  int a=0;
+	  a=(score<0)?(score*-1):score;
+	  System.out.println(a);
+	  
+}
+}
+
+조건문 -실습b
+package examlpe;
+
+public class Test {
+public static void main(String[] args) {
+	 double fee=1000;
+	 double age=67;
+	 if (age<=6) {
+		 age=fee*0.5;}
+	 
+	 else if (age>=65) {
+		 age=fee*0.7;}
+	 
+	 else {
+	   age=fee;}
+	 System.out.println((int)age);
+}
+}
+
+조건문c
+
+package examlpe;
+
+public class Test {
+public static void main(String[] args) {
+	 double fee=1000;
+	 double age=19;
+	 if (age<=6) {
+		 age=fee*0.5;}
+	 
+	 else if (age>=65) {
+		 age=fee*0.7;}
+	 
+	 else if(age>=7&&age<20) {
+		 age=fee*0.8;
+	 }
+	 
+	 else {
+	   age=fee;}
+	 System.out.println((int)age);
+}
+}
+
+조건문d0
+
+package examlpe;
+
+public class Test {
+public static void main(String[] args) {
+         int score=100;
+         if(score>=0&&score<=100)
+         {
+        	 System.out.print("정상");
+         }
+         else
+        	 System.out.print("비정상");
+
+
+
+}
+
+조건문 D1
+
+
+}
+
+조건문E
+
+package examlpe;
+
+public class Test {
+public static void main(String[] args) {
+       int x=23;
+       int y=0;
+       
+       
+       if (y>x) {
+    	   System.out.println(y);
+    	   System.out.print(x);
+    	   return;
+       }
+       else
+       System.out.println(x);
+	   System.out.print(y);
+
+
+
+}
+}     
+조건문f
+package examlpe;
+
+public class Test {
+public static void main(String[] args) {
+       int x=23;
+       int y=89;
+       
+       if (x>y) {
+    	   System.out.print(x);
+    	   return;
+       }
+       else
+    	   System.out.print(y);
+
+
+}
+}     
+조건문 g
+
+조건문H
+package examlpe;
+
+public class Test {
+public static void main(String[] args) {
+       int score=60;
+       
+       if(score>=90)
+       { score='A';}
+       else if (score>=80&&score<90)
+       { score='B';}
+       else if (score>=70&&score<80)
+       { score='c';}
+       else if (score>=60&&score<70)
+       { score='D';}
+       else
+       { score='F';} 
+       
+       System.out.print((char)score);
+     
+       
+       
+             
+
+}
+}     
+
+
+조건문i

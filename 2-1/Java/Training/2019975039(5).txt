@@ -1,0 +1,101 @@
+객체-A
+package examlpe;
+
+public class Test {
+public static void main(String[] args) {
+student s ;
+s=new student();
+s.id="KSU-123";
+s.foreignerYN=true;
+s.gpa=3.97;
+s.gender='여';
+s.numberOfFinishedSemesters=2;
+System.out.println("학번="+s.id);
+System.out.println("이수학기수="+s.numberOfFinishedSemesters);
+System.out.println("성별="+s.gender);
+System.out.println("평점="+s.gpa);
+System.out.println("외국인여부="+s.foreignerYN);
+}
+}
+
+package examlpe;
+
+public class student {
+	String id;
+	boolean  foreignerYN;
+	int   numberOfFinishedSemesters;
+	char  gender;
+	double  gpa;
+
+}
+객체-D
+package examlpe;
+
+public class Test {
+	
+		public static void main(String[] args) {
+		Employee e=new Employee();
+		e.id ="EMP-123";
+		e.joinDate =new Datelnfo();
+		e.joinDate.year=2015;
+		e.joinDate.month=3;
+		e.joinDate.day=2;
+		
+		
+		System.out.println("직원 아이디: "+e.id);
+		System.out.println("직원 입사일: "+e.joinDate.year+"년"+e.joinDate.month+"월"+e.joinDate.day+"일");
+		}
+}
+package examlpe;
+
+public class Employee {
+	String id;
+	Datelnfo joinDate;
+
+}
+package examlpe;
+
+public class Datelnfo {
+	int year;
+	int  month;
+	int  day;
+	
+
+}
+객체-H
+package examlpe;
+
+public class Test {
+	
+		public static void main(String[] args) {
+		TestResult t1=new TestResult();
+		t1.midTermScore =80;
+		t1.finalTermScore=100;
+		
+		TestResult t2=new TestResult();
+		t2.midTermScore =90;
+		t2.finalTermScore=94;
+		
+		TestResult t3=new TestResult();
+		t3.midTermScore =70;
+		t3.finalTermScore=80;
+		
+		TestResult v[]= {t1,t2,t3};
+		for(int i=0;i< v.length;i++) {
+		System.out.print("중간점수: "+v[i].midTermScore);
+		
+		System.out.println("기말점수: "+v[i].finalTermScore);
+		
+		}
+	}		
+}
+
+package examlpe;
+
+public class TestResult {
+	double midTermScore;
+	double  finalTermScore;
+
+}
+
+

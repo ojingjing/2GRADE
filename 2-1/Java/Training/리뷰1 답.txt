@@ -1,0 +1,76 @@
+1. 변수 age는 선언되어 있지 않았다고 가정하고, age에 23을 대입하는 코드를 작성하시오. (변수,자료형-기초실습A)
+
+ int age=23;
+
+2. 다음은 어떤 코드와 그 실행결과이다. 이 코드를 완성하시오. (변수,자료형-기초실습A)
+double v=65.7;
+
+System.out.println(v);
+
+<실행결과>
+65.7
+
+3. 다음은, 변수 score에 저장된 값이 70점 이상이면 합격, 그렇지 않으면 불합격을 출력하는 코드이다. 이 코드를 완성하시오. (조건문)
+int	score=90;
+if(  score>=70   ) System.out.println("합격");
+else System.out.println("불합격");
+
+4. 다음은, 1부터 5까지의 곱을 출력하는 코드이다. 이 코드를 완성하시오. (반복문-실습B)
+int  p=1;
+for(int i= 1 ; i<=5; i++ ){
+	p=p*i;
+}
+System.out.println(p);
+
+
+5. 정수 99를 배열 grade에 저장하는 코드를 작성하시오. 3가지 서로 다른 방법으로 작성하시오. (배열-실습A)
+- 방법1:int grade[]= {99};
+- 방법2:int grade[];
+          grade=new int[1]; 
+          grade[0]=99;
+- 방법3:int grade[]=new int[1];
+          grade[0]=99;
+
+6. 다음 조건에 따라 고객 클래스 Customer를 정의하시오.
+- 필드변수명(설명,자료형): email(메일주소,String)
+public class Customer {
+             String email;
+7. 위 6번에서 정의한 Customer 클래스를 이용하여, 메일주소가 gdhong@ks.ac.kr인 Customer 객체를 생성한 후 그 객체의 메일주소를 화면에 출력하는 코드를 작성하시오.
+Customer c=new Customer();
+c.email="gdhong@ks.ac.kr";
+System.out.println(c.email);
+8. 다음 조건에 따라 학생 클래스 Student를 정의하시오.
+- 필드변수명(설명,자료형): id(학번,String), score(점수,int)
+- 학번, 점수를 파라미터로 전달받아 대응하는 필드에 대입하는 생성자
+- 학번, 점수를 문자열로 반환하는 toString() 메소드
+public class Student{
+      String id;
+      int score;
+      
+      public Student (String id,int score) {
+    	  this.id=id;
+    	  this.score=score;
+      }
+@Override
+	public String toString() {
+	return id+""+score;
+}
+}
+9. 아래에서 max()는 파라미터로 전달받은 두 정수 중 큰 값을 반환하는 메소드이다. 아래 코드가 정상 동작하도록 클래스 Calc를 작성하시오.
+
+int max=Calc.max(12,34);
+public static int max(in x,int y){
+         if(x>y)
+	 return x;
+	 else
+		return y;
+
+
+10. 다음은 C:/Temp/memo.txt 파일의 내용을 행 단위로 화면에 출력하는 코드이다(try-catch 생략됨). 이 코드의 빈 곳을 완성하시오. (참고: FileReader, hasNext, nextLine)
+
+Scanner iF=new ___Scanner______(__new_FileReader______("C:/Temp/memo.txt"));
+while(iF.____hasNext_______()){
+	System.out.println(iF.___nextLine____());
+}
+iF.__close____();
+

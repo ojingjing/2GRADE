@@ -1,0 +1,199 @@
+1. 다음은 문자 배열 v의 각 원소를 새로운 배열 w에 역순 저장한 후 w를 출력하는 코드와 그 실행 결과이다. 이 코드를 완성하시오.
+
+char	v[] = {'소','프','트','웨','어','학','과'};
+char	w[]=new char[v.length];
+for (int i = 0; i < v.length; i++) {
+	w[i]=v[v.length-1-i];
+}
+System.out.println(Arrays.toString(w));
+
+++char	v[] = {'소','프','트','웨','어','학','과'};
+		for(int i=v.length-1;i>=0;i--) {
+			System.out.print(v[i]);
+			if(v[i]!=v[0])
+			System.out.print(",");
+		}
+<실행결과>
+[과, 학, 어, 웨, 트, 프, 소]
+
+
+2. 다음은 문자 배열 v의 공백이 아닌 문자들만을 새로운 배열 w에 저장한 후 w를 출력하는 코드와 그 실행 결과이다. 이 코드를 완성하시오.
+
+char	v[]={' ','부','산',' ',' ','해','운','대',' ','관','광',' ','명','소',' '};
+int		size=0;
+for (int i = 0; i < v.length; i++) if(v[i]!=' ') size++;
+char	w[]=new char[size];
+for (int i=0, k=0; i < v.length; i++) {
+	if(v[i]!=' ') w[k++]=v[i];
+}
+System.out.println(Arrays.toString(w));
+
+<실행결과>
+[부, 산, 해, 운, 대, 관, 광, 명, 소]
+
+
+3. 다음은 문자 배열 v의 각 문자들 사이에 대쉬문자를 삽입하여 얻어지는 새로운 배열 w를 생성한 후 w를 출력하는 코드와 그 실행 결과이다. 이 코드를 완성하시오.
+
+char	v[] = {'소','프','트','웨','어','학','과'};
+char	w[]=new char[2*v.length-1];
+for (int i = 0, k = 0; i < v.length; i++) {
+	if(i>0) w[k++]='-';
+	w[k++]=v[i];
+}
+System.out.println(Arrays.toString(w));
+
+<실행결과>
+[소, -, 프, -, 트, -, 웨, -, 어, -, 학, -, 과]
+
+
+
+<문자열C>
+String s = "부산바이러스연구소";
+if(s.startsWith("부산") && s.endsWith("연구소")) System.out.println(s.substring(2, s.length()-3));
+else System.out.println("입력오류");
+
+<문자열D>
+String s = "부산-서울-대구";
+int	v=s.indexOf("서울");
+
+<문자열E>
+String s = "서울-부산-대구-대전-강릉";
+String	v[]=s.split("-");
+System.out.println(v[0]);
+System.out.println(v[v.length-1]);
+
+<문자열F>
+String s = "한국 필리핀 프랑스 독일";
+String	v[]=s.split("\\s+");
+for (String w : v) {
+	if(w.length()>=3) System.out.println(w);
+}
+
+<문자열G>
+String s = "한국-필리핀-프랑스-독일";
+System.out.println(s.replace("-", ","));
+
+<문자열H>
+String s = "2020-03-31 [192.168.77.189] yhkim";
+System.out.println(s.substring(s.indexOf("[")+1, s.lastIndexOf("]")));
+
+<문자열I>
+String s = "11.12 33.12 55.12";
+String	v[]=s.split("\\s+");
+double	sum=0;
+for (String n : v) sum+=Double.parseDouble(n);
+System.out.printf("%.2f", sum/v.length);
+
+<문자열J>
+String s = "그들은 한국 방문을 위해 비행기를 탔다를";
+String	v[]=s.split("\\s+");
+for (int i = 0; i < v.length; i++) {
+	if(v[i].endsWith("을") || v[i].endsWith("를")) {
+		if(i+1 < v.length) System.out.println(v[i+1]);
+	}
+}
+
+<문자열K>
+String s = "그들은 한국 방문을 위해 비행기를 탔다.";
+String	v[]=s.split("\\s+");
+for (int i = v.length-1; i>=0; i--) System.out.print(v[i]+" ");
+
+<문자열L>
+String s = "그들은 한국 방문을 위해 비행기를 탔다.";
+char	v[]=s.toCharArray();
+for (int i = v.length-1; i >= 0; i--) System.out.print(v[i]);
+
+<문자열M>
+String s = "그들은 한국 방문을 위해 비행기를 탔다.";
+String	v[]=s.split("\\s+");
+for (String w : v) {
+	for (int i = w.length()-1; i >=0 ; i--) System.out.print(w.charAt(i));
+	System.out.print(" ");
+}
+
+<문자열Z>
+String s = "한국-서울,영국-런던,중국-베이징";
+String	v[]=s.split(",");
+for (int i = 0; i < v.length; i++) {
+	System.out.print(v[i].substring(0, v[i].indexOf("-")));
+	if(i<v.length-1) System.out.print(",");
+}
+System.out.println();
+for (int i = 0; i < v.length; i++) {
+	System.out.print(v[i].substring(v[i].indexOf("-")+1));
+	if(i<v.length-1) System.out.print(",");
+}
+
+
+
+<상속실습C>
+public class Book {
+	String	id;
+	String	title;
+	int	year;
+	public Book(String id, String title, int year) {
+		this.id=id;
+		this.title=title;
+		this.year=year;
+	}
+	@Override
+	public String toString() {
+		return id+","+title+","+year+"(년)";
+	}
+}
+
+public class EBook extends Book {
+	double	fileSize;
+	public EBook(String id, String title, int year, double fileSize) {
+		super(id, title, year);
+		this.fileSize=fileSize;
+	}
+	@Override
+	public String toString() {
+		return super.toString()+","+fileSize+"(MB)";
+	}
+}
+public class Test {
+	public static void main(String[]args) {
+		EBook	eBook=new EBook("B00012", "자바 시작하기", 2018, 20.4);
+		System.out.println(eBook);
+	}
+}
+
+
+<상속실습G>
+public class Rectangle {
+	int	width, height;
+	public Rectangle(int width, int height) {
+		this.width=width;
+		this.height=height;
+	}
+	public double getArea() {
+		return width*height;
+	}
+}
+
+public class Circle {
+	int	radius;
+	public Circle(int radius) {
+		this.radius=radius;
+	}
+	public double getArea() {
+		return 3.14159*radius*radius;
+	}
+}
+public class Test {
+	public static void main(String[]args) {
+		Object	v[]= {new Rectangle(3, 4), new Circle(5), new Circle(2)};
+		for (Object o : v) {
+			if(o instanceof Rectangle) {
+				Rectangle	r=(Rectangle) o;
+				System.out.println("사각형 "+r.getArea());
+			}
+			if(o instanceof Circle) {
+				Circle	c=(Circle) o;
+				System.out.println("원 "+c.getArea());
+			}
+		}
+	}
+}

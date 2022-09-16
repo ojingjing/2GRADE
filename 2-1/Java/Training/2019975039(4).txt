@@ -1,0 +1,97 @@
+
+
+메소드 -A
+package examlpe;
+
+public class Test {
+public static void main(String[] args) {
+int x=1,y=2,z=2;
+
+double value = func(x,y,z);
+System.out.println( value);
+}
+private static double func(double x, double y,double z) {
+
+	double value = (x - y)/z;
+   return  value;
+}
+}
+
+메소드-B
+package examlpe;
+
+public class Test {
+public static void main(String[] args) {
+	int x=10,y=30;
+	printSum(x, y); // 실행결과 40
+}
+private static void printSum(int x, int y) {
+      System.out.print(x+y);
+	
+     return;
+}
+} 
+메소드-E
+
+public class Test {
+
+   public static void main(String[] args) {
+      double x=3.0, y=5.0;
+      double v[]=basicMath(x,y);
+      System.out.println("합 = "+v[0]);
+      System.out.println("차 = "+v[1]);
+      System.out.println("곱 = "+v[2]);
+      System.out.println("몫(나머지 포함) = "+v[3]);
+   }
+
+   private static double[] basicMath(double x, double y) {
+      double v[]= {x+y,x-y,x*y,x/y};
+      return v;
+   }
+
+}
+
+String-A
+
+package examlpe;
+
+import javax.swing.JOptionPane;
+public class Test {
+public static void main(String[] args) {
+String s = JOptionPane.showInputDialog("문자열 입력");
+char firstChar =s.charAt(0);
+char lastChar =s.charAt(s.length()-1);
+System.out.println(firstChar);
+System.out.println(lastChar);
+}
+}
+
+String-B
+
+package examlpe;
+
+import javax.swing.JOptionPane;
+public class Test {
+public static void main(String[] args) {
+String s = JOptionPane.showInputDialog("문자열 입력");
+String prefix =s.substring(0,3);
+String postfix =s.substring(10) ;
+System.out.println(prefix);
+System.out.println(postfix);
+}
+}
+String-E
+
+package examlpe;
+
+import javax.swing.JOptionPane;
+public class Test {
+public static void main(String[] args) {
+String s = JOptionPane.showInputDialog("문자열 입력");
+String v[] =s.split("-") ;
+String firstCountry =v[0] ;
+String lastCountry =v[4] ;
+System.out.println(firstCountry);
+System.out.println(lastCountry);
+}
+}

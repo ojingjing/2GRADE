@@ -1,0 +1,59 @@
+기초-실습A
+
+ class Test {
+
+	public static void main(String[] args) {
+		
+		String name="김철수";
+		int age=21;
+		double weight=65.7;
+		char gender='남';
+		boolean dopingTestPassed=true;
+			System.out.println(name); 
+			System.out.println(age); 
+			System.out.println(weight); 
+			System.out.println(gender);
+			System.out.println(dopingTestPassed);
+			}
+			
+	
+
+}
+기초-실습B
+class Test {
+
+	public static void main(String[] args) {
+		
+		int box1Weight = 50;
+		int box2Weight = 300;
+		int temp = 0;
+		
+		temp=box1Weight;
+		box1Weight=box2Weight;
+		box2Weight=temp;
+		System.out.println(box1Weight);
+		System.out.println(box2Weight);
+			
+	}
+
+}
+
+기초-실습C
+class Test {
+
+	public static void main(String[] args) {
+		
+		int mathScore=79,langScore=86,engScore=95; 
+		 
+		int total=mathScore+langScore+engScore; double average=total/3.0;System.out.println(average); 
+			
+	}
+
+}
+
+기초-실습D
+(1) x의값이 실수이므로 실수형인 double 을 써야하는데 정수형인 int를 씀
+(2) 큰따옴표 말고 작은 따옴표를 써야함
+(3)1/2가 0.5이지만 앞숫자만 적용하고 뒤에.0이 붙어서 0.0으로 나오게 되므로 오류이다
+(4)int 의 범위를 초과하게됨
+(5)쌍따옴표를 써야한다.

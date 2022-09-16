@@ -1,0 +1,29 @@
+public class Test {
+
+	public static void main(String[] args) {
+	   System.out.println("안녕하세요");
+
+	}
+
+}
+
+
+public class KSUSW {
+
+	public static void main(String[] args) {
+		System.out.println("경성대학교 소프트웨어학과");
+
+	}
+
+}
+
+
+public class Vprint {
+
+	public static void main(String[] args) {
+		System.out.println("대\n한\n민\n국");
+
+	}
+
+}
+

@@ -1,0 +1,220 @@
+A
+package examlpe;
+
+public class Player {
+	String id;
+	int record1, record2, record3;
+	public Player(String id, int record1, int record2, int record3) {
+	this.id=id;
+	this.record1=record1;
+	this.record2=record2;
+	this.record3=record3;
+	}
+	public double getAverage() {
+		 return (record1+record2+record3)/3.0;
+	}
+}
+
+B
+
+package examlpe;
+
+public class Movie{
+String title;
+   String releaseDate;
+   public Movie(String title, String releaseDate) {
+      this.title=title;
+      this.releaseDate=releaseDate;
+   }
+
+   public int getReleaseYear() { 
+	   String x[] = releaseDate.split("-");
+      int year = Integer.parseInt(x[0]);
+      return year;
+   }
+   public int getReleaseMonth() {
+	   String x[] = releaseDate.split("-");
+      int month = Integer.parseInt(x[1]);
+      return month;
+   }
+   public int getReleaseDay() {
+	   String x[] = releaseDate.split("-");
+      int day = Integer.parseInt(x[2]);
+      return day;
+   }
+}
+
+
+private A
+
+
+package examlpe;
+
+public class Member {
+	private String email;
+	private String joinDate;
+    
+	public Member(String email,String joinDate) {
+		this.email=email;
+		this.joinDate=joinDate;
+	}
+	
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email=email;
+	}
+	public String getJoinDate() {
+		return joinDate;
+	}
+	public void setJoinDate() {
+		this.joinDate=joinDate;
+	}
+	public String getJoinYear() {
+		return getJoinDate().substring(0,4);
+	}
+}
+B
+package examlpe;
+
+public class Member {
+	private String email;
+	private Dateinfo joinDate;
+    
+	public Member(String email,Dateinfo joinDate) {
+		this.email=email;
+		joinDate=new Dateinfo();
+	}
+	
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email=email;
+	}
+	public String getJoinDate() {
+		return joinDate.toString();
+	}
+	
+	public String getJoinYear() {
+		return getJoinDate().substring(0,4);
+	}
+}
+package examlpe;
+
+public class Dateinfo {
+      String year;
+      String month;
+      String day;
+      
+      public Dateinfo(String month, String year, String day) {
+    	  this.year=year;
+    	  this.month=month;
+    	  this.day=day;
+      }
+      @Override
+      public String toString() {
+    	  return year+month+day;
+      }
+}
+
+오버로딩 A
+
+package examlpe;
+
+public class Employee {
+	String id;
+	double monthlyPayBase=250; // 기본 월 급여액 250만원
+	public Employee(String id) {
+	this.id=id;
+	}
+	public Employee(String id,double monthlyPayBase) {
+		this(id);
+		this.monthlyPayBase=monthlyPayBase;
+	}
+	public double getMonthlyPay() {
+	return monthlyPayBase;
+	}
+	}
+오버로딩 B
+
+package examlpe;
+
+public class Employee {
+	String id;
+	double monthlyPayBase=250; // 기본 월 급여액 250만원
+	
+	public Employee(String id,double monthlyPayBase) {
+		this(id);
+		this.monthlyPayBase=monthlyPayBase;
+		}
+	
+	public double getMonthlyPay(int absentDays) { // 10% 기본 수당 지급
+	double ab=monthlyPayBase*(1-absentDays/30.0);
+	double pay=ab+ab*0.1;
+	return pay;
+	}
+	public double getMonthlyPay() { // 10% 기본 수당 지급
+		double pay=monthlyPayBase+monthlyPayBase*0.1;
+		return pay;
+		}
+}
+
+
+static A
+
+package examlpe;
+
+public class Calc {
+	static double PI=3.14159;
+	 public static int max(int x,int y) {
+		 if(x>y)
+		 return x;
+		 else
+			return y;
+		
+	 }
+	 public static double areaOfCircle(double radius) {
+		 return radius*radius*PI;
+	 }
+	 
+
+}
+
+
+static D
+
+
+package examlpe;
+
+public class Calc {
+	
+	  
+	 public static int sum(int x,int y) {
+		 return x+y;
+	 }
+		 public static double sum(double x,double y) {
+			 return x+y;	
+	 }
+		 public static int sum(int n[]) {
+			 int x=0;
+		 
+			 for (int i=0;i<n.length;i++) {
+				 x+=n[i];
+				 
+			 }
+			 return x;
+		 }
+			 public static int sum(String s[]) {
+				 int x=0;
+			  for (int i=0;i<s.length;i++) {
+				  x+=Integer.parseInt(s[i]);
+			  }
+			  return x;
+		      }
+
+
+}
+
+

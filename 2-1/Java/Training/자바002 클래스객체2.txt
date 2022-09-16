@@ -1,0 +1,168 @@
+A
+
+package examlpe;
+
+ public class Location {
+           String country;
+           String city;
+           
+   public Location(String country,String city) {
+	   this.country=country;
+	   this.city=city;
+   }
+}
+
+
+B
+package examlpe;
+
+public class Dateinfo {
+      int year;
+      int month;
+      int day;
+      
+      public Dateinfo( int month, int year, int day) {
+    	  this.year=year;
+    	  this.month=month;
+    	  this.day=day;
+      }
+}
+
+
+C
+package examlpe;
+
+public class Car {
+               String id;
+               int length;
+               double weight;
+               boolean exportOnly;
+               char fuelType;
+            
+               public Car(String id,int length,double weight,char fuelType,boolean exportOnly) {
+            	   this.id=id;
+            	   this.exportOnly=exportOnly;
+            	   this.fuelType=fuelType;
+            	   this.length=length;
+            	   this.weight=weight;
+               }
+}
+
+
+D
+
+package examlpe;
+
+public class StudentScore {
+String id;
+int score[]=new int[3];
+
+
+
+public StudentScore(String id,int score0,int score1,int score2) {
+        this.id=id;
+        this.score[0]=score0;
+        this.score[1]=score1;
+        this.score[2]=score2;        
+}
+}
+
+E
+package examlpe;
+
+public class Dateinfo {
+      int year;
+      int month;
+      int day;
+      
+      public Dateinfo(int month, int year, int day) {
+    	  this.year=year;
+    	  this.month=month;
+    	  this.day=day;
+      }
+}
+
+package examlpe;
+
+public class Employee {
+              String id;
+              Dateinfo joinDate;
+
+public Employee(String id,int year,int month,int day) {
+	  this.id=id;
+	  joinDate=new Dateinfo(year,month,day);
+	  
+    
+}
+
+F
+package examlpe;
+
+public class YMD {
+             int year;
+             int month;
+             int day;
+public YMD(int year,int month,int day) {
+	this.year=year;
+	this.month =month;
+	this.day=day;
+}
+
+@Override
+public String toString() {
+	return year+"년"+month+"월"+day+"일";
+	
+}
+}
+G
+package examlpe;
+
+public class User {
+          String email;
+          String registrationDate;
+          
+
+public User(String email, String registrationDate) {
+	this.email=email;
+	this.registrationDate=registrationDate;
+}
+@Override
+public String toString() {
+	
+	return "메일주소 :"+email+","+"등록일 :"+registrationDate.substring(0,4)+"/"+registrationDate.substring(4,6)+"/"+registrationDate.substring(6,8);
+}
+
+}
+H
+package examlpe;
+
+public class Name {
+            String firstName;
+            String lastName;
+public Name(String firstName, String lastName)  {
+	this.firstName=firstName;
+	this.lastName=lastName;
+}
+@Override
+public String toString() {
+	return "이름:"+firstName+","+lastName;
+	
+}
+}
+package examlpe;
+
+public class Person {
+            String id;
+            Name name;
+            
+ public Person(String id,String firstName,String lastName) {
+	 this.id=id;
+	 name =new Name(firstName,lastName);
+			
+ }
+ @Override
+ public String toString() {
+	 return "아이디:"+id+name.toString();
+ }
+}
+

@@ -1,0 +1,223 @@
+상속A
+
+
+package examlpe;
+
+public class Student extends Person{
+      String name;
+      public Student(String id, String name) {
+    	  super(id);
+    	  this.name=name;
+   }
+   @Override
+   public String toString() {
+	   return "학번:"+super.toString()+",이름:"+name;
+   }
+   
+}
+package examlpe;
+
+public class Person {
+            String id;
+            
+  public Person(String id) {
+	  this.id=id;
+	  
+  }
+  @Override
+  
+  public String toString() {
+	  return id;
+  }
+}
+
+B
+package examlpe;
+
+public class VIPCustomer extends Customer {
+       
+	public VIPCustomer(String email) {
+		super(email);
+		
+	}
+	public void pay(int money) {
+		super.pay(money);
+		eMoney=0;
+		eMoney+=money*0.3;
+	}
+	public String toString() {
+	return 	"VIPCustomer: 메일주소="+email+", eMoney="+eMoney;
+	}
+}
+
+package examlpe;
+
+public class Customer {
+             String email;
+             double eMoney;
+
+public Customer (String email) {
+	this.email=email;
+	
+}
+public void pay(int money) {
+	this.eMoney=money*0.1;
+}
+@Override
+public String toString() {
+	return "Customer:메일주소="+email+",eMoney="+eMoney;
+}
+
+}
+
+
+C
+package examlpe;
+
+
+public class Test {
+	public static void main(String[] args) {
+	EBook e=new EBook("B00012","자바시작하기",2018,20.4);
+			System.out.println(e);
+	}}
+package examlpe;
+
+public class Book {
+        
+	String id;
+	String title;
+	int year;
+	public Book(String id,String title,int year) {
+	this.id=id;
+	this.title=title;
+	this.year=year;
+	}
+	@Override
+	
+		public String toString() {
+			return id+","+title+","+year+"(년)";
+		}
+	}
+
+
+package examlpe;
+
+public class EBook  extends Book {
+       double fileSize;
+       public EBook (String id,String title,int year,double fileSize) {
+    	   super(id,title,year);
+    	   this.fileSize=fileSize;
+       }
+       @Override
+       public String toString() {
+    	   return super.toString()+fileSize;
+       }
+}
+
+D
+
+package examlpe;
+
+public class OutdoorEmployee extends Employee {
+	int dangerLevel;
+	
+public OutdoorEmployee(String id,int dangerLevel) {
+	super(id);
+	this.dangerLevel=dangerLevel;
+	
+}
+public double getMonthlyPay() {
+	super.getMonthlyPay();
+	  return monthlyPay+monthlyPay*(dangerLevel/10.0);
+}
+}
+
+package examlpe;
+
+public class IndoorEmployee extends Employee {
+                int certificateLevel;
+              
+              
+                public IndoorEmployee(String id,int certificateLevel ) {
+                	super(id);
+                	this.certificateLevel=certificateLevel;
+                	
+                }
+                public double getMonthlyPay() {
+                	super.getMonthlyPay();
+                 return	monthlyPay=monthlyPay+monthlyPay* (certificateLevel/100.0);
+                }
+}
+package examlpe;
+
+public class Employee {
+	String id;
+	double monthlyPay=100; // 기본 월 급여액 250만원
+	public Employee(String id) {
+	this.id=id;
+	}
+	public double getMonthlyPay() {
+		  return this.monthlyPay=monthlyPay;
+		
+	
+	}
+	}
+
+E
+package examlpe;
+
+
+public class Test {
+	public static void main(String[] args) {
+		PointBankAccount  pba=new PointBankAccount("KSB-0123",0, 0) ;
+		pba.deposit(35000);
+	    pba.deposit(150000);
+	    pba.withdraw(58000);
+	    System.out.println(pba.balance);
+	}}
+
+
+package examlpe
+
+public class BankAccount {
+            String id;
+            double balance;
+           public BankAccount(String id,double balance) {
+        	   this.balance=balance;
+        	   this.id=id;
+        	   
+           }
+           public void deposit(double money) {
+        	   balance+=money;
+           }
+           public void withdraw(double money) {
+        	   balance-=money;
+           }
+           @Override
+           public String toString() {
+        	   return id+balance;
+           }
+ }
+
+package examlpe;
+
+public class PointBankAccount extends BankAccount {
+            double point;            
+           public PointBankAccount(String id,double balance,double point) {
+        	   super(id,balance);
+        	   this.point=point;
+           }
+           @Override
+           
+        	   public String toString() {
+        	   return super.toString()+point;
+           }
+           public void deposit(double money) {
+        	   super.deposit(money);
+        	   point+=money*0.1;
+           }
+           
+
+}
+
+

@@ -1,0 +1,90 @@
+메소드 A
+
+package examlpe;
+
+public class Test {
+public static void main(String[] args) {
+int x=1, y=2, z=2;
+double value=func(x,y,z);
+System.out.println(value); // 실행결과 -0.5
+}
+private static double func(double x,double y,double z) {
+	double value;
+	value=(x-y)/z;
+	return value;
+}
+}
+
+메소드 B
+package examlpe;
+
+public class Test {
+public static void main(String[] args) {
+int x=10, y=30;
+   int sum = printSum(x, y); // 실행결과 40
+   System.out.println(sum);
+ }
+
+private static int printSum(int n,int m) {
+	int sum=n+m;
+	return sum;
+}
+}
+
+메소드 c
+
+package examlpe;
+
+public class Test {
+	public static void main(String[] args) {
+		charPrint('=',15);
+		System.out.println("국내기업목록");
+		charPrint('=',15);
+		}
+	public static char charPrint(char x,int n) {
+		for(int i=1;i<=n;i++) {
+			System.out.print(x);
+			
+		}
+		System.out.println();
+		return x;
+	}
+}
+
+package examlpe;xxxxxxxxxxxxxxxxxxxxx
+
+public class Test {
+public static void main(String[] args) {
+charPrint('=',15);
+System.out.println("국내기업목록");
+charPrint('=',15);
+}
+private static void charPrint(char n,int m)
+{    
+	for(int i=1;i<=m;i++)
+	{
+		System.out.println(n);
+		if (m==15) return;
+		System.out.println();
+	}
+          
+}
+
+메소드 D
+
+package examlpe;
+
+public class Test {
+	public static void main(String[] args) {
+		int v[]= {6,2,-4,9,-1,4,-8};
+		int sum=sumPositives(v);
+		System.out.println(sum); // 실행결과 21
+		}
+	public static int sumPositives(int v[]) {
+	    int sum=0; 
+		for (int i=0;i<v.length;i++) {
+	    	 sum+=v[i];
+	     }
+		return sum;
+	}
+	}

@@ -1,0 +1,110 @@
+객체메소드실습 A
+
+public class MethodA {
+   public static void main(String[] args) {
+      MethodA_Player p = new MethodA_Player("P001", 210, 205, 220);
+      System.out.println(p.getAverage());
+   }
+}
+
+public class MethodA_Player {
+   String id;
+   int record1,record2,record3;
+   public MethodA_Player(String id, int r1, int r2, int r3) {
+      this.id = id;
+      this.record1 = r1;
+      this.record2 = r2;
+      this.record3 = r3;
+   }
+   public double getAverage() {
+      return (record1+record2+record3)/3.;
+   }
+   
+}
+
+private실습 A
+
+public class PrivateA {
+   public static void main(String[] args) {
+      PrivateA_Member p = new PrivateA_Member("yhkim@ks.ac.kr", "20190214");
+      System.out.println(p.getEmail());
+      System.out.println(p.getJoinDate());
+      p.setEmail("yhkim@cs.ks.ac.kr");
+      System.out.println(p.getEmail());
+      System.out.println(p.getJoinDate());
+      System.out.println(p.getJoinYear());
+   }
+}
+
+public class PrivateA_Member {
+   private String email, joinDate;
+   public PrivateA_Member(String email, String date) {
+      this.email = email;
+      this.joinDate = date;
+   }
+   public String getEmail() {
+      return email;
+   }
+   public void setEmail(String email) {
+      this.email = email;
+   }
+   public String getJoinDate() {
+      return joinDate;
+   }
+   public String getJoinYear() {
+      return joinDate.substring(0,4);
+   }
+}
+
+
+오버로딩실습 A
+
+public class OverrodingA {
+   public static void main(String[] args) {
+      OverrodingA_Employee e1 = new OverrodingA_Employee("E-001");
+      OverrodingA_Employee e2 = new OverrodingA_Employee("E-001", 100);
+      System.out.println(e1.getMonthlyPay());
+      System.out.println(e2.getMonthlyPay());
+      
+   }
+}
+
+public class OverrodingA_Employee {
+   String id;
+   double monthlyPayBase=250;
+   public OverrodingA_Employee(String id) {
+      this.id=id;
+   }
+   public OverrodingA_Employee(String id, double mpb) {
+      this(id);
+      this.monthlyPayBase = mpb;
+   }
+   
+   public double getMonthlyPay() {
+      return monthlyPayBase;
+   }
+}
+
+
+static실습 A
+
+public class StaticA {
+   public static void main(String[] args) {
+      int max = StaticA_Calc.max(12,34);
+      System.out.println(max);
+      System.out.println("원주율="+StaticA_Calc.PI);
+      double radius=2.0;
+      double area=StaticA_Calc.areaOfCircle(radius);
+      System.out.println("원의 면적="+area);
+   }
+}
+
+public class StaticA_Calc {
+   static double PI=3.141592;
+   public static int max(int a, int b) {
+      return a>b? a:b;
+   }
+   public static double areaOfCircle(double r) {
+      return r*r*PI;
+   }
+}

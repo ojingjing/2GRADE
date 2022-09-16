@@ -1,0 +1,30 @@
+객체-A
+package examlpe;
+
+public class Test {
+public static void main(String[] args) {
+student s ;
+s=new student();
+s.id="KSU-123";
+s.foreignerYN=true;
+s.gpa=3.97;
+s.gender='여';
+s.numberOfFinishedSemesters=2;
+System.out.println("학번="+s.id);
+System.out.println("이수학기수="+s.numberOfFinishedSemesters);
+System.out.println("성별="+s.gender);
+System.out.println("평점="+s.gpa);
+System.out.println("외국인여부="+s.foreignerYN);
+}
+}
+
+package examlpe;
+
+public class student {
+	String id;
+	boolean  foreignerYN;
+	int   numberOfFinishedSemesters;
+	char  gender;
+	double  gpa;
+
+}

@@ -1,0 +1,283 @@
+A
+
+package examlpe;
+
+public class Test {
+	public static void main(String[] args) {
+		Sutdent s ;
+		s=new Sutdent();
+		s.id="KSU-123";
+		System.out.println("ÇĞ¹ø="+s.id);
+		System.out.println("?´ìˆ˜?™ê¸°??"+s.numberOfFinishedSemesters);
+		System.out.println("?±ë³„="+s.gender);
+		System.out.println("?‰ì ="+s.gpa);
+		System.out.println("?¸êµ­?¸ì—¬ë¶€="+s.foreignerYN);
+		}
+		}
+
+
+B
+package examlpe;
+
+public class Test {
+	public static void main(String[] args) {
+		Robot robot;
+		robot = new Robot();
+		robot.id="R2D2";
+		System.out.println(robot.id);
+		}
+		}
+C*********************
+
+
+D
+package examlpe;
+
+public class Test {
+	public static void main(String[] args) {
+		Employee e;
+		e=new Employee();
+		e.id="EMP-123";
+		e.joinDate=new Datelnfo();
+		e.joinDate.year=2015;
+		e.joinDate.month=3;
+		e.joinDate.day=2;
+		
+		System.out.println("ì§ì› ?„ì´?? "+e.id);
+		System.out.println("ì§ì› ?…ì‚¬?? "+e.joinDate.year+"??+e.joinDate.month+"??+e.joinDate.day+"??);
+	}
+	}
+E
+package examlpe;
+
+public class Test {
+	public static void main(String[] args) {
+		Person p;
+		p=new Person();
+		p.name=new Name();
+		p.name.firstName="James";
+		p.name.lastName="Brown";
+				
+		
+		
+		System.out.println("?´ë¦„: "+p.name.firstName+" "+p.name.lastName);
+	
+	
+	}
+	}
+F
+
+package examlpe;
+
+public class Test {
+	public static void main(String[] args) {
+		
+		Student s;
+		s=new Student();
+		s.id="S-001";
+		s.score=new Score();
+		s.score.langScore=100;
+		s.score.mathScore=90;
+		s.score.engScore=90;
+		
+		System.out.println("ÇĞ¹ø: "+s.id);
+		System.out.println("±¹¾îÁ¡¼ö: "+s.score.langScore);
+		System.out.println("¿µ¾îÁ¡¼ö: "+s.score.engScore);
+		System.out.println("¼öÇĞÁ¡¼ö: "+s.score.mathScore);
+		
+	}}
+
+G
+
+package examlpe;
+
+public class Test {
+	public static void main(String[] args) {
+		Applicant a;
+		a=new Applicant();
+		a.seqNo=89;
+		a.testinfo=new Testinfo();
+		a.testinfo.score=87.5;
+		a.testinfo.location=new Locationinfo();
+		a.testinfo.location.country="ë¯¸êµ­";
+		a.testinfo.location.city="?´ìš•";
+		a.testinfo.date=new Dateinfo();
+		a.testinfo.date.year=2020;
+		a.testinfo.date.month=3;
+		a.testinfo.date.day=25;
+		
+		System.out.println("ì§€?ì ?œë²ˆ: "+a.seqNo);
+		System.out.println("?ŒìŠ¤???ìˆ˜: "+a.testinfo.score);
+		System.out.println("?ŒìŠ¤???¥ì†Œ: "+a.testinfo.location.country+" "+a.testinfo.location.city);
+		System.out.println("?ŒìŠ¤??? ì§œ: "+a.testinfo.date.year+"??+a.testinfo.date.month+"??+a.testinfo.date.day+"??);
+		
+		
+			
+	
+	}
+	}
+
+
+H
+package examlpe;
+
+public class Test {
+
+	public static void main(String[] args) {
+	  TestResult t1[]=new TestResult[0];
+	  t1[0]=new TestResult();
+	  t1[0].mid=80;
+	  t1[0].fin=100;
+	  TestResult t2=new TestResult();
+	  t2.mid=90;
+	  t2.fin=94;
+	  TestResult t3=new TestResult();
+      t3.mid=70;
+      t3.fin=80;
+      TestResult v[]= {t1,t2,t3};
+      for(int i=0;i<v.length;i++) {
+    	  System.out.println("ì¤‘ê°„?ìˆ˜ :"+v[i]+"ê¸°ë§?ìˆ˜:"+v[i]);
+      }
+	}
+
+}
+
+package examlpe;
+
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		TestResult  t1=new TestResult();
+
+		TestResult  t2=new TestResult();
+		
+		TestResult t3=new TestResult();
+         t1.midTermScore=80;
+         t1.finalTermScore=100;
+         t2.midTermScore=90;
+         t2.finalTermScore=94;
+         t3.midTermScore=70;
+         t3.finalTermScore=80;
+         TestResult v[]= {t1,t2,t3};
+         for(int i=0;i<v.length;i++)
+        	 System.out.println("Áß°£Á¡¼ö :"+v[i].midTermScore+","+" ±â¸»Á¡¼ö :"+v[i].finalTermScore);
+         		
+		
+		}
+	
+	
+	
+	}
+
+
+i
+
+package examlpe;
+
+public class Test {
+
+	public static void main(String[] args) {
+	 Employee e1=new Employee();
+	 e1.id= "EMP-123";
+	 e1.join=new Dateinfo();
+	 e1.join.year=2015;
+	 e1.join.month=3;
+	 e1.join.day=2;
+	 
+ 
+	 
+	}
+
+}
+
+j
+
+
+public class Test {
+
+   public static void main(String[] args) {
+      Customer c1 = new Customer();
+      Customer c2 = new Customer();
+      c1.id = "IamCoder";
+      c1.buyingHistory = new BuyingHistory();
+      c1.buyingHistory.date = "20191231";
+      c1.buyingHistory.itemsBought = new String[] {"Å°º¸µå","¸ğ´ÏÅÍ","¸¶¿ì½º"};
+      c2.id = "BusanCitizen";
+      c2.buyingHistory = new BuyingHistory();
+      c2.buyingHistory.date = "20191030";
+      c2.buyingHistory.itemsBought = new String[] {"¾ß±¸°ø","¾ß±¸¹èÆ®"};
+      Customer v[] = {c1,c2};
+      for(int i=0;i<v.length;i++) {
+         System.out.print(v[i].id+" "+v[i].buyingHistory.date+" ");
+         for(int j =0;j<v[i].buyingHistory.itemsBought.length;j++)
+            System.out.print(v[i].buyingHistory.itemsBought[j]+" ");
+         System.out.println();
+      }
+      for(int i=0;i<v.length;i++)
+         System.out.println(v[i].id+" "+v[i].buyingHistory.date+" "+v[i].buyingHistory.itemsBought[0]+" µî("+v[i].buyingHistory.itemsBought.length+"°³)");
+   }
+}
+
+K
+package examlpe;
+
+
+public class Test {
+
+	private static final char B = 0;
+	private static final char A = 0;
+	private static final char C = 0;
+	private static final char D = 0;
+	private static final char F = 0;
+
+	public static void main(String[] args) {
+		Student s=null;
+		s=new Student();
+		s.name="ÀÌ¿µÈñ";
+		s.score=99;
+		char grade=getGrade(s);
+		System.out.println(grade);
+		
+	}
+
+	private static char getGrade(Student s) {
+		if(s.score>=90)
+		return 'A';
+		if(s.score>=80&&s.score<=90)
+			return 'b';
+		else if(s.score>=70&&s.score<=80)
+			return 'c';
+		else if(s.score>=60&&s.score<=70)
+			return 'd';
+		else
+			return 'f';
+	
+	}
+
+
+
+L
+
+package examlpe;
+
+
+public class Test {
+	public static void main(String[] args) {
+	Student s;
+	s=createStudent("ÀÌ¿µÈñ", 99);
+	System.out.println(s.name+","+s.score);
+	
+}
+private static Student createStudent(String name,int score) {
+   Student s=new Student();
+   s.name=name;
+   s.score=score;
+   return s ;
+}
+}
+	
+	
+	
+	}
