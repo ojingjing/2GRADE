@@ -1,0 +1,35 @@
+package wlddj;
+
+import java.util.LinkedList;
+
+public class Test {
+		public static void main(String[] args) {
+		int V=10; // 그래프 내 총 노드 개수 (노드 번호 0 ~ 9)
+		String input="0 1 0 2 1 3 1 4 1 5 2 5 2 6 2 7 3 8 5 8 5 9 7 9";
+		LinkedList<Integer> adjList[]=new LinkedList[V];
+		for (int i = 0; i < adjList.length; i++) adjList[i]=new LinkedList<>();
+		String s[]=input.split("\\s+"); // String s[]=input.split(" ");
+		for (int i = 0; i < s.length; i+=2){
+		int v1=Integer.parseInt(s[i]);
+		int v2=Integer.parseInt(s[i+1]);
+		adjList[v1].add(v2); // 무방향그래프로 처리
+		adjList[v2].add(v1); // 무방향그래프로 처리
+		}
+		for (int i = 0; i < adjList.length; i++) System.out.println("node "+i+" => "+adjList[i]);
+		dfsVisit(adjList);
+		}
+		private static void dfsVisit(LinkedList<Integer>[] adjList) {
+		boolean visited[]=new boolean[adjList.length]; // adjList.length = 그래프 내 총 노드 개수
+		dfs(adjList, visited, 0); // 시작노드부터 dfs 방문
+		}
+		private static void dfs(LinkedList<Integer>[] adjList, boolean[] visited, int v) {
+		if(visited[7]==true) return;
+		visited[v]=true; // 현재 노드 v 방문 표시
+		System.out.print(v+" "); // 현재 노드 v에 대한 처리
+		for (Integer w : adjList[v]) { // 현재 노드 v의 인접 노드 w에 대해
+		if(visited[w]==false) { // w가 미방문 인접 노드라면
+		dfs(adjList, visited, w); // 미방문 인접노드 w에 대해 dfs 재귀호출
+		}
+		}
+		}
+		}

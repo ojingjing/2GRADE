@@ -1,0 +1,57 @@
+2번
+package wlddj;
+
+import java.util.TreeSet;
+
+
+			public class Test {
+				public static void main(String[] args) {
+				int n[]={50,20,70,10,30,5,15,25,60,90,62,65,64,35};
+				TreeSet<Integer> set=new TreeSet<>();
+				for (int i = 0; i < n.length; i++) set.add(n[i]); // 이진탐색트리에 자료 삽입
+				System.out.println(set);
+				System.out.println(set.size()); // 트리 내 총 자료 개수 반환
+				set.remove(20); // key 값 20 삭제
+				System.out.println(set);
+				System.out.println(set.contains(30)); // key 값 30이 존재하는 경우 true 반환
+				System.out.println(set.contains(33)); // key 값 33이 존재하지 않는 경우 false 반환
+				System.out.println("최소값="+set.first()); // 최소 key 값 반환
+				System.out.println("최대값="+set.last()); // 최대 key 값 반환
+				for (Integer key : set) { // 키 값들에 대한 오름차순 순회
+				System.out.print(key+" ");
+				}
+				}
+				}
+
+
+
+3번
+package wlddj;
+
+import java.util.TreeMap;
+
+
+			public class Test {
+				public static void main(String[] args) {
+					TreeMap<String, Integer> map=new TreeMap<>();
+					map.put("Korea", 32); // <key, value>가 <"Korea", 32>인 자료 삽입
+					map.put("Japan", 50);
+					map.put("France", 10);
+					map.put("China", 16);
+					System.out.println(map);
+					map.put("Japan", 70); // key 값 "Japan"의 value를 70으로 변경
+					System.out.println(map);
+					map.remove("Japan"); // key 값 "Japan"에 해당하는 자료 삭제
+					System.out.println(map);
+					System.out.println(map.size()); // 트리 내 총 자료 개수 반환
+					System.out.println(map.containsKey("Korea")); // key "Korea" 존재 시 true 반환
+					System.out.println(map.containsKey("Germany")); // key "Germany" 부재 시 false 반환
+					System.out.println(map.get("Korea")); // key 값 "Korea"에 대응되는 value 반환
+					System.out.println(map.get("Germany")); // key 값 부재 시 null 반환
+					System.out.println("최소 key 값="+map.firstKey()); // 최소 key 값 반환
+					System.out.println("최대 key 값="+map.lastKey()); // 최대 key 값 반환
+					for (String key : map.keySet()) { // 키 값들에 대한 오름차순 순회
+					System.out.println(key+"=>"+map.get(key));
+
+				}
+				}}
