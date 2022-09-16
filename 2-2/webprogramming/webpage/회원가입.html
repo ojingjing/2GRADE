@@ -1,0 +1,163 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>login</title>
+
+<style>
+header #search {
+ 
+float:right;
+margin-top:-90px
+}
+header #search .btnl{
+background-color:#a6eabf; 
+border:solid 1px #a6eabf; 
+color: #FFF; 
+height:28px;
+width:55px; 
+margin-left:1px; 
+margin-right: 100px
+}
+header #head_link ul {
+list-style:none; 
+font-size: 0.75em;
+
+}
+header #head_link  {
+float:right;
+margin-top:-130px
+}
+  html, body {  height: 100%; background-color:#a6eabf }
+/*메인 화면*/
+.header { width: 100%; height: 25%;
+background: white ; }
+.nav { width: 20%; height: 593px; float: left;
+background: #a6eabf; }
+.section { width: 80%; height: 593px; float: left;
+background: #a6eabf; }
+
+
+
+</style>
+</head>
+<body>
+  <header class="formheader">
+    <h1>Hello everyone 🎈</h1>
+    <p>Create a New world</p>
+  </header>
+   <strong style="border-radius: 40px; background:darkblue; width:300px; padding: 10px; color:white;">회원가입</strong>
+   <br>
+   <br>
+   <br>
+  <table boder = "" bgcolor = "#a6eabf" >
+ <form>
+  <tr>
+
+   <td text-align="center"><small>아이디 </small></td>
+   <td>
+   <input type = "text" />
+   <a onclick="alert('사용할수있는 아이디 입니다');" style="cursor:pointer;background-color:#6F9DD5; border:solid 1px #6F9DD5; color: #FFF;padding: 2px;"><small>중복확인</small></a>
+   </td>
+  </tr>
+
+
+
+  <tr>
+   <td> <small>비밀번호</small> </td>
+   <td> <input type = "password"/> </td>
+  </tr>
+
+
+  <tr>
+   <td><small> 비밀번호 </small> </td>
+   <td> <input type = "password"/>&nbsp;<small style="color:darkblue;">*비밀번호를 다시입력하여주세요.</small> </td>
+  </tr>
+
+  <tr>
+   <td> <small>성명 </small></td>
+   <td> <input type = "text"/> </td>
+  </tr>
+
+
+  <tr>
+   <td><small> 성별 </small></td>
+   <td>
+    <input type = "radio" name = "gender"/ checked> 남자
+    <input type = "radio" name = "gender"/> 여자
+   </td>
+  </tr>
+
+
+
+
+  <tr>
+   <td><small>이메일 </small></td>
+   <td>
+    <input type = "text"/> @ <input type = "text"/> &nbsp;&nbsp;
+    <select>
+     <option> 직접입력 </option>
+     <option> naver.com </option>
+     <option> daum.net </option>
+     <option> nate.com </option>
+    </select>
+   </td>
+  </tr>
+
+
+
+
+  <tr>
+   <td><small> 주소 </small></td>
+   <td>
+    <input type = "text"/>
+  <a onclick="location.href='https://www.juso.go.kr/info/RoadNameDataList.do?type=search&roadCd=&keyword=&city1=11&county1=680&town1=&searchType=0&extend=true'" style="cursor:pointer;background-color:#6F9DD5; border:solid 1px #6F9DD5; color: #FFF;padding: 2px;"><small>주소찾기</small></a>
+   </td>
+  </tr>
+  <tr>
+   <td><small> 상세주소 </small></td>
+   <td>
+    <input type = "text"/>
+   </td>
+  </tr>
+
+
+
+  <tr>
+   <td><small> 휴대폰</small> </td>
+   <td>
+    <input type = "radio" name = "phone"/> SKT
+    <input type = "radio" name = "phone"/> KTF
+    <input type = "radio" name = "phone"/> LGU+
+   <br>
+    <select>
+     <option> 010 </option>
+     <option> 011 </option>
+     <option> 016 </option>
+     <option> 018 </option>
+    </select>
+    <input type = "text" size = "6"/> - <input type = "text" size = "6"/>
+   </td>
+  </tr>
+
+
+
+  <tr>
+   <td> <small>자기소개</small>  </td>
+   <td>
+    <textarea cols = "60" rows = "8"></textarea>
+   </td>
+  </tr>
+ </form>
+</table>
+
+<br>
+
+ <a onclick="alert('회원가입을 축하드립니다 !!');" style="cursor:pointer;background-color:#6F9DD2; border:solid 1px #6F9DD2; color: #FFF;padding: 2px;"><small>가입하기</small></a>
+</section>
+
+
+</body>
+</html>
+
+

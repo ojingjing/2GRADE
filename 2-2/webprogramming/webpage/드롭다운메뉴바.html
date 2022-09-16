@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style>
+		.dropdown-button {
+			background-color: #FFF;
+			padding: 8px;
+			font-size: 15px;
+			border: none;
+		}
+		.dropdown {
+			position: relative;
+			display: inline-block;
+		}
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: #FFDAB3;
+			min-width: 75px;
+			padding: 5px;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		}
+		.dropdown-content a{
+			color: black;
+			padding: 8px;
+			text-decoration: none;
+			display: block;
+		}
+		.dropdown-content a:hover {background-color: #CD853F;}
+		.dropdown:hover .dropdown-content {display: block;}
+		.dropdown:hover .dropdown-button {background-color: #CD853F;}
+	</style>
+</head>
+<body>
+
+		<h1>드롭다운 메뉴</h1>
+		<div class="dropdown">
+			<button class="dropdown-button">Dropdown</button>
+			<div class="dropdown-content">
+				<a href="#">검색</a>
+				<a href="#">보기</a>
+				<a href="#">찾기</a>
+				<a href="#">열기</a>
+			</div>
+		</div>
+
+</body>
+</html>
