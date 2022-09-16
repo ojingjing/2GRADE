@@ -1,0 +1,42 @@
+package wlddj;
+
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;	
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+
+
+public class Test {
+	public static void main(String[] args) {
+		JFrame jFrame=new JFrame();
+		jFrame.setLayout(new FlowLayout());
+		JLabel jLabel1=new JLabel("First number");
+		JLabel jLabel2=new JLabel("Second number");
+		JTextField jTextField1=new JTextField(10);
+		JTextField jTextField2=new JTextField(10);
+		JButton jButton=new JButton("Add");
+		jFrame.add(jLabel1);
+		jFrame.add(jTextField1);
+		jFrame.add(jLabel2);
+		jFrame.add(jTextField2);
+		jFrame.add(jButton);
+		jButton.addActionListener(
+				new ActionListener() {
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						int n1=Integer.parseInt(jTextField1.getText());
+						int n2=Integer.parseInt(jTextField2.getText());
+						JOptionPane.showMessageDialog(null, n1+n2);
+					}
+				}
+				);
+		jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		jFrame.pack();
+		jFrame.setVisible(true);
+	}
+}				

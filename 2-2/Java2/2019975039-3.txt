@@ -1,0 +1,20 @@
+package wlddj;
+
+import java.io.FileWriter;
+
+
+public class Test {
+	public static void main(String[] args) {
+		try {
+			FileWriter oF=new FileWriter("C:/Temp/data.txt", true);
+			//FileWriter oF=new FileWriter("C:/Temp/data.txt", Charset.forName("UTF-8"), true);
+			String v="홍길동"+"\t"+"부산"+"\n";
+			oF.write(v);
+			oF.write("이영희"+"\t"+"김해"+"\n");
+			oF.write("김철수"+"\t"+"울산"+"\n");
+			oF.close();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
+}
